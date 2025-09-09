@@ -49,7 +49,7 @@ resource "aws_instance" "blog" {
 module "alb" {
   source = "terraform-aws-modules/alb/aws"
 
-  name    = "blog-alb"
+  name    = "blog_alb"
   vpc_id  = module.blog_vpc.vpc_id
   subnets = module.blog_vpc.public_subnets
 
