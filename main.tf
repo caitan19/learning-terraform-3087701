@@ -54,7 +54,7 @@ module "autoscaling" {
   max_size = 2
 
 
- target_group_arns   = module.blog_alb.target_groups_arns
+ target_group_arns   = [module.blog_alb.target_groups_arns]
  vpc_zone_identifier = module.blog_vpc.public_subnets
  security_groups = [module.blog_sg.security_group_id]
 
